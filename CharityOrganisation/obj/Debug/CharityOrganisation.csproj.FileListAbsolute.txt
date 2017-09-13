@@ -1,0 +1,15 @@
+C:\Users\Lunera\Documents\Visual Studio 2012\Projects\CharityOrganisation\CharityOrganisation\bin\CharityOrganisation.dll
+C:\Users\Lunera\Documents\Visual Studio 2012\Projects\CharityOrganisation\CharityOrganisation\bin\CharityOrganisation.pdb
+C:\Users\Lunera\Documents\Visual Studio 2012\Projects\CharityOrganisation\CharityOrganisation\obj\Debug\CharityOrganisation.csprojResolveAssemblyReference.cache
+C:\Users\Lunera\Documents\Visual Studio 2012\Projects\CharityOrganisation\CharityOrganisation\obj\Debug\CharityOrganisation.dll
+C:\Users\Lunera\Documents\Visual Studio 2012\Projects\CharityOrganisation\CharityOrganisation\obj\Debug\CharityOrganisation.pdb
+C:\Users\Lunera\Documents\Visual Studio 2012\Projects\CharityOrganisation\CharityOrganisation\bin\EntityFramework.dll
+C:\Users\Lunera\Documents\Visual Studio 2012\Projects\CharityOrganisation\CharityOrganisation\bin\EntityFramework.xml
+C:\Users\Lunera\Desktop\CharityOrganisation\CharityOrganisation\bin\CharityOrganisation.dll.config
+C:\Users\Lunera\Desktop\CharityOrganisation\CharityOrganisation\bin\CharityOrganisation.dll
+C:\Users\Lunera\Desktop\CharityOrganisation\CharityOrganisation\bin\CharityOrganisation.pdb
+C:\Users\Lunera\Desktop\CharityOrganisation\CharityOrganisation\bin\EntityFramework.dll
+C:\Users\Lunera\Desktop\CharityOrganisation\CharityOrganisation\bin\EntityFramework.xml
+C:\Users\Lunera\Desktop\CharityOrganisation\CharityOrganisation\obj\Debug\CharityOrganisation.csprojResolveAssemblyReference.cache
+C:\Users\Lunera\Desktop\CharityOrganisation\CharityOrganisation\obj\Debug\CharityOrganisation.dll
+C:\Users\Lunera\Desktop\CharityOrganisation\CharityOrganisation\obj\Debug\CharityOrganisation.pdb

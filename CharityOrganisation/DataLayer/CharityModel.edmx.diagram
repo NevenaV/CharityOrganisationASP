@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5064b5598cd84503a05872d965fbde8e" Name="Diagram1">
+        <EntityTypeShape EntityType="CharityOrganisationDatabaseModel.CharitableCaus" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharityOrganisationDatabaseModel.Contact" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharityOrganisationDatabaseModel.Donation" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharityOrganisationDatabaseModel.Role" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharityOrganisationDatabaseModel.User" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharityOrganisationDatabaseModel.PollAnswer" Width="1.5" PointX="5.375" PointY="3.75" />
+        <EntityTypeShape EntityType="CharityOrganisationDatabaseModel.PollQuestion" Width="1.5" PointX="3.375" PointY="6.75" />
+        <EntityTypeShape EntityType="CharityOrganisationDatabaseModel.Event" Width="1.5" PointX="5.375" PointY="6.75" />
+        <EntityTypeShape EntityType="CharityOrganisationDatabaseModel.Gallery" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="CharityOrganisationDatabaseModel.InterestingFact" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="CharityOrganisationDatabaseModel.Menu" Width="1.5" PointX="7.375" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

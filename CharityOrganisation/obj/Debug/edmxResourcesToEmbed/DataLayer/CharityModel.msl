@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CharityOrganisationDatabaseModelStoreContainer" CdmEntityContainer="CharityOrganisationDatabaseEntities">
+    <EntitySetMapping Name="CharitableCauses">
+      <EntityTypeMapping TypeName="CharityOrganisationDatabaseModel.CharitableCaus">
+        <MappingFragment StoreEntitySet="CharitableCauses">
+          <ScalarProperty Name="idCharitableCause" ColumnName="idCharitableCause" />
+          <ScalarProperty Name="causeName" ColumnName="causeName" />
+          <ScalarProperty Name="totalFundsDonated" ColumnName="totalFundsDonated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contacts">
+      <EntityTypeMapping TypeName="CharityOrganisationDatabaseModel.Contact">
+        <MappingFragment StoreEntitySet="Contact">
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="idContact" ColumnName="idContact" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="timeSent" ColumnName="timeSent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Donations">
+      <EntityTypeMapping TypeName="CharityOrganisationDatabaseModel.Donation">
+        <MappingFragment StoreEntitySet="Donations">
+          <ScalarProperty Name="csc" ColumnName="csc" />
+          <ScalarProperty Name="creditCard" ColumnName="creditCard" />
+          <ScalarProperty Name="anonymous" ColumnName="anonymous" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="idDonation" ColumnName="idDonation" />
+          <ScalarProperty Name="idUser" ColumnName="idUser" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="timeDonated" ColumnName="timeDonated" />
+          <ScalarProperty Name="charitableCauseId" ColumnName="charitableCauseId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="CharityOrganisationDatabaseModel.Role">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="idRole" ColumnName="idRole" />
+          <ScalarProperty Name="roleName" ColumnName="roleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="CharityOrganisationDatabaseModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="idUser" ColumnName="idUser" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="idRole" ColumnName="idRole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="UserInsert" FunctionName="CharityOrganisationDatabaseModel.Store.UserInsert" />
+    <FunctionImportMapping FunctionImportName="DonationInsert" FunctionName="CharityOrganisationDatabaseModel.Store.DonationInsert" />
+    <FunctionImportMapping FunctionImportName="ContactInsert" FunctionName="CharityOrganisationDatabaseModel.Store.ContactInsert" />
+    <EntitySetMapping Name="PollAnswers">
+      <EntityTypeMapping TypeName="CharityOrganisationDatabaseModel.PollAnswer">
+        <MappingFragment StoreEntitySet="PollAnswers">
+          <ScalarProperty Name="idPollQuestion" ColumnName="idPollQuestion" />
+          <ScalarProperty Name="answerScore" ColumnName="answerScore" />
+          <ScalarProperty Name="pollAnswer1" ColumnName="pollAnswer" />
+          <ScalarProperty Name="idPollAnswer" ColumnName="idPollAnswer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PollQuestions">
+      <EntityTypeMapping TypeName="CharityOrganisationDatabaseModel.PollQuestion">
+        <MappingFragment StoreEntitySet="PollQuestions">
+          <ScalarProperty Name="pollActive" ColumnName="pollActive" />
+          <ScalarProperty Name="pollQuestion1" ColumnName="pollQuestion" />
+          <ScalarProperty Name="idPollQuestion" ColumnName="idPollQuestion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="PollAnswerUpvote" FunctionName="CharityOrganisationDatabaseModel.Store.PollAnswerUpvote" />
+    <EntitySetMapping Name="Events">
+      <EntityTypeMapping TypeName="CharityOrganisationDatabaseModel.Event">
+        <MappingFragment StoreEntitySet="Events">
+          <ScalarProperty Name="eventTime" ColumnName="eventTime" />
+          <ScalarProperty Name="idUser" ColumnName="idUser" />
+          <ScalarProperty Name="event1" ColumnName="event" />
+          <ScalarProperty Name="idEvent" ColumnName="idEvent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Galleries">
+      <EntityTypeMapping TypeName="CharityOrganisationDatabaseModel.Gallery">
+        <MappingFragment StoreEntitySet="Gallery">
+          <ScalarProperty Name="thumbPath" ColumnName="thumbPath" />
+          <ScalarProperty Name="path" ColumnName="path" />
+          <ScalarProperty Name="imageName" ColumnName="imageName" />
+          <ScalarProperty Name="idImage" ColumnName="idImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InterestingFacts">
+      <EntityTypeMapping TypeName="CharityOrganisationDatabaseModel.InterestingFact">
+        <MappingFragment StoreEntitySet="InterestingFacts">
+          <ScalarProperty Name="fact" ColumnName="fact" />
+          <ScalarProperty Name="idFact" ColumnName="idFact" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="CharitableCauseDelete" FunctionName="CharityOrganisationDatabaseModel.Store.CharitableCauseDelete" />
+    <FunctionImportMapping FunctionImportName="CharitableCauseInsert" FunctionName="CharityOrganisationDatabaseModel.Store.CharitableCauseInsert" />
+    <FunctionImportMapping FunctionImportName="CharitableCauseUpdate" FunctionName="CharityOrganisationDatabaseModel.Store.CharitableCauseUpdate" />
+    <FunctionImportMapping FunctionImportName="ContactDelete" FunctionName="CharityOrganisationDatabaseModel.Store.ContactDelete" />
+    <FunctionImportMapping FunctionImportName="DonationDelete" FunctionName="CharityOrganisationDatabaseModel.Store.DonationDelete" />
+    <FunctionImportMapping FunctionImportName="CharitableCauseAddFunds" FunctionName="CharityOrganisationDatabaseModel.Store.CharitableCauseAddFunds" />
+    <FunctionImportMapping FunctionImportName="GalleryInsert" FunctionName="CharityOrganisationDatabaseModel.Store.GalleryInsert" />
+    <FunctionImportMapping FunctionImportName="GalleryUpdate" FunctionName="CharityOrganisationDatabaseModel.Store.GalleryUpdate" />
+    <FunctionImportMapping FunctionImportName="GalleryDelete" FunctionName="CharityOrganisationDatabaseModel.Store.GalleryDelete" />
+    <FunctionImportMapping FunctionImportName="PollAnswerInsert" FunctionName="CharityOrganisationDatabaseModel.Store.PollAnswerInsert" />
+    <FunctionImportMapping FunctionImportName="PollAnswerDelete" FunctionName="CharityOrganisationDatabaseModel.Store.PollAnswerDelete" />
+    <FunctionImportMapping FunctionImportName="PollAnswerUpdate" FunctionName="CharityOrganisationDatabaseModel.Store.PollAnswerUpdate" />
+    <FunctionImportMapping FunctionImportName="PollQuestionInsert" FunctionName="CharityOrganisationDatabaseModel.Store.PollQuestionInsert" />
+    <FunctionImportMapping FunctionImportName="PollQuestionUpdate" FunctionName="CharityOrganisationDatabaseModel.Store.PollQuestionUpdate" />
+    <FunctionImportMapping FunctionImportName="PollQuestionDelete" FunctionName="CharityOrganisationDatabaseModel.Store.PollQuestionDelete" />
+    <FunctionImportMapping FunctionImportName="UserDelete" FunctionName="CharityOrganisationDatabaseModel.Store.UserDelete" />
+    <FunctionImportMapping FunctionImportName="UserUpdate" FunctionName="CharityOrganisationDatabaseModel.Store.UserUpdate" />
+    <FunctionImportMapping FunctionImportName="InterestingFactDelete" FunctionName="CharityOrganisationDatabaseModel.Store.InterestingFactDelete" />
+    <FunctionImportMapping FunctionImportName="InterestingFactInsert" FunctionName="CharityOrganisationDatabaseModel.Store.InterestingFactInsert" />
+    <FunctionImportMapping FunctionImportName="InterestingFactUpdate" FunctionName="CharityOrganisationDatabaseModel.Store.InterestingFactUpdate" />
+    <FunctionImportMapping FunctionImportName="EventInsert" FunctionName="CharityOrganisationDatabaseModel.Store.EventInsert" />
+    <FunctionImportMapping FunctionImportName="PollSetAllInactive" FunctionName="CharityOrganisationDatabaseModel.Store.PollSetAllInactive" />
+    <FunctionImportMapping FunctionImportName="PollDeleteAllRelatedAnswers" FunctionName="CharityOrganisationDatabaseModel.Store.PollDeleteAllRelatedAnswers" />
+    <EntitySetMapping Name="Menus">
+      <EntityTypeMapping TypeName="CharityOrganisationDatabaseModel.Menu">
+        <MappingFragment StoreEntitySet="Menu">
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="priority" ColumnName="priority" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="idMenu" ColumnName="idMenu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

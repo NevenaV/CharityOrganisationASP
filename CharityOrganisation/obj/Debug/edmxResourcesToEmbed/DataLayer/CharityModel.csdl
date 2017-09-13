@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CharityOrganisationDatabaseModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="CharityOrganisationDatabaseEntities" p1:LazyLoadingEnabled="false">
+    <EntitySet Name="CharitableCauses" EntityType="CharityOrganisationDatabaseModel.CharitableCaus" />
+    <EntitySet Name="Contacts" EntityType="CharityOrganisationDatabaseModel.Contact" />
+    <EntitySet Name="Donations" EntityType="CharityOrganisationDatabaseModel.Donation" />
+    <EntitySet Name="Roles" EntityType="CharityOrganisationDatabaseModel.Role" />
+    <EntitySet Name="Users" EntityType="CharityOrganisationDatabaseModel.User" />
+    <FunctionImport Name="UserInsert">
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="password" Mode="In" Type="String" />
+      <Parameter Name="role" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DonationInsert">
+      <Parameter Name="idUser" Mode="In" Type="Int32" />
+      <Parameter Name="amount" Mode="In" Type="Decimal" />
+      <Parameter Name="timeDonated" Mode="In" Type="DateTime" />
+      <Parameter Name="cause" Mode="In" Type="Int32" />
+      <Parameter Name="firstName" Mode="In" Type="String" />
+      <Parameter Name="lastName" Mode="In" Type="String" />
+      <Parameter Name="anonymous" Mode="In" Type="Int32" />
+      <Parameter Name="creditCard" Mode="In" Type="Int64" />
+      <Parameter Name="csc" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ContactInsert">
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="message" Mode="In" Type="String" />
+      <Parameter Name="timeSent" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="PollAnswers" EntityType="CharityOrganisationDatabaseModel.PollAnswer" />
+    <EntitySet Name="PollQuestions" EntityType="CharityOrganisationDatabaseModel.PollQuestion" />
+    <FunctionImport Name="PollAnswerUpvote">
+      <Parameter Name="idAnswer" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="Events" EntityType="CharityOrganisationDatabaseModel.Event" />
+    <EntitySet Name="Galleries" EntityType="CharityOrganisationDatabaseModel.Gallery" />
+    <EntitySet Name="InterestingFacts" EntityType="CharityOrganisationDatabaseModel.InterestingFact" />
+    <FunctionImport Name="CharitableCauseDelete">
+      <Parameter Name="idCause" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CharitableCauseInsert">
+      <Parameter Name="causeName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CharitableCauseUpdate">
+      <Parameter Name="causeName" Mode="In" Type="String" />
+      <Parameter Name="idCause" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ContactDelete">
+      <Parameter Name="idContact" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DonationDelete">
+      <Parameter Name="idDonation" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CharitableCauseAddFunds">
+      <Parameter Name="idCause" Mode="In" Type="Int32" />
+      <Parameter Name="funds" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="GalleryInsert">
+      <Parameter Name="imageName" Mode="In" Type="String" />
+      <Parameter Name="path" Mode="In" Type="String" />
+      <Parameter Name="thumb" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GalleryUpdate">
+      <Parameter Name="idImage" Mode="In" Type="Int32" />
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="path" Mode="In" Type="String" />
+      <Parameter Name="thumb" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GalleryDelete">
+      <Parameter Name="idImage" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PollAnswerInsert">
+      <Parameter Name="answer" Mode="In" Type="String" />
+      <Parameter Name="idQuestion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PollAnswerDelete">
+      <Parameter Name="idAnswer" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PollAnswerUpdate">
+      <Parameter Name="idAnswer" Mode="In" Type="Int32" />
+      <Parameter Name="answer" Mode="In" Type="String" />
+      <Parameter Name="score" Mode="In" Type="Int32" />
+      <Parameter Name="idQuestion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PollQuestionInsert">
+      <Parameter Name="question" Mode="In" Type="String" />
+      <Parameter Name="active" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PollQuestionUpdate">
+      <Parameter Name="idQuestion" Mode="In" Type="Int32" />
+      <Parameter Name="question" Mode="In" Type="String" />
+      <Parameter Name="active" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PollQuestionDelete">
+      <Parameter Name="idQuestion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UserDelete">
+      <Parameter Name="idUser" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UserUpdate">
+      <Parameter Name="idUser" Mode="In" Type="Int32" />
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="password" Mode="In" Type="String" />
+      <Parameter Name="role" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InterestingFactDelete">
+      <Parameter Name="idFact" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InterestingFactInsert">
+      <Parameter Name="fact" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InterestingFactUpdate">
+      <Parameter Name="idFact" Mode="In" Type="Int32" />
+      <Parameter Name="fact" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="EventInsert">
+      <Parameter Name="eventDescr" Mode="In" Type="String" />
+      <Parameter Name="idUser" Mode="In" Type="Int32" />
+      <Parameter Name="time" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="PollSetAllInactive" />
+    <FunctionImport Name="PollDeleteAllRelatedAnswers">
+      <Parameter Name="idQuestion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="Menus" EntityType="CharityOrganisationDatabaseModel.Menu" />
+  </EntityContainer>
+  <EntityType Name="CharitableCaus">
+    <Key>
+      <PropertyRef Name="idCharitableCause" />
+    </Key>
+    <Property Name="idCharitableCause" Type="Int32" Nullable="false" />
+    <Property Name="causeName" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="totalFundsDonated" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="idContact" />
+    </Key>
+    <Property Name="idContact" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="timeSent" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="message" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Donation">
+    <Key>
+      <PropertyRef Name="idDonation" />
+    </Key>
+    <Property Name="idDonation" Type="Int32" Nullable="false" />
+    <Property Name="idUser" Type="Int32" Nullable="false" />
+    <Property Name="amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="timeDonated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="charitableCauseId" Type="Int32" Nullable="false" />
+    <Property Name="firstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="lastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="anonymous" Type="Int32" Nullable="false" />
+    <Property Name="creditCard" Type="Int32" Nullable="false" />
+    <Property Name="csc" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="idRole" />
+    </Key>
+    <Property Name="idRole" Type="Int32" Nullable="false" />
+    <Property Name="roleName" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="idUser" />
+    </Key>
+    <Property Name="idUser" Type="Int32" Nullable="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="idRole" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PollAnswer">
+    <Key>
+      <PropertyRef Name="idPollAnswer" />
+    </Key>
+    <Property Name="idPollAnswer" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pollAnswer1" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="answerScore" Type="Int32" Nullable="false" />
+    <Property Name="idPollQuestion" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PollQuestion">
+    <Key>
+      <PropertyRef Name="idPollQuestion" />
+    </Key>
+    <Property Name="idPollQuestion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pollQuestion1" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="pollActive" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Event">
+    <Key>
+      <PropertyRef Name="idEvent" />
+    </Key>
+    <Property Name="idEvent" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="event1" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="idUser" Type="Int32" Nullable="false" />
+    <Property Name="eventTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Gallery">
+    <Key>
+      <PropertyRef Name="idImage" />
+    </Key>
+    <Property Name="idImage" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="imageName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="path" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="thumbPath" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="InterestingFact">
+    <Key>
+      <PropertyRef Name="idFact" />
+    </Key>
+    <Property Name="idFact" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fact" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="idMenu" />
+    </Key>
+    <Property Name="idMenu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="priority" Type="Int32" Nullable="false" />
+    <Property Name="link" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

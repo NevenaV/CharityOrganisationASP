@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="CharityOrganisation.Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="stylesheet" href="./css/style.css" type="text/css"/>
+	<link rel="stylesheet" href="./css/lightbox.css" type="text/css"/>
+	<link rel="shortcut icon" href="./images/favicon.ico"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="keywords" content="reci"/>
+	<meta name="description" content="Opis"/>
+	<script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="../js/script.js"></script>
+	<script type="text/javascript" src="../js/lightbox.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="header-div">
+        <ul class="nav" id="navMenu" runat="server">
+            
+        </ul>
+    </div>
+    <div class="div-90 margin-auto">
+	<div id="adminPanelBox">
+		<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+	</div>
+    </div>
+	<div class="cleaner"></div>
+	<div class="footer-div">
+        <h5 class="text-center">&copy; Nevena Vuksanovic 98/14</h5>
+        <h6 class="text-center">Web Programiranje ASP (2017)</h6>
+	</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Template.master.cs" Inherits="CharityOrganisation.Template" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+	<link rel="stylesheet" href="css/lightbox.css" type="text/css"/>
+	<link rel="shortcut icon" href="images/favicon.ico"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="keywords" content="reci"/>
+	<meta name="description" content="Opis"/>
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/lightbox.min.js"></script>
+    <link rel="stylesheet" href="js/unslider-master/dist/css/unslider.css"/>
+    <link rel="stylesheet" href="js/unslider-master/dist/css/unslider-dots.css"/>
+    <script src="js/unslider-master/src/js/unslider.js"></script>
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="header-div">
+        <h1 class="float-left pink-text-shadow margin-left-30">CHARITY ORGANISATION</h1>
+        <ul class="nav" id="navMenu" runat="server">
+            
+        </ul>
+    </div>
+	<div class="main-div">
+		<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+	</div>
+	<div class="rightside-div">
+        <div class="div-100 text-center">
+            <h2>Top 5 Noble Donations</h2>
+            Order By:
+            <select id="ddlTopDonations" onchange="getTopDonations();">
+                <option value="1">Largest Amount</option>
+                <option value="2">Latest</option>
+            </select>
+        </div>
+        <div id="topDonations" runat="server">
+
+        </div>     
+	</div>
+	<div class="cleaner"></div>
+	<div class="footer-div">
+        <h5 class="text-center">&copy; Nevena Vuksanovic 98/14</h5>
+        <h6 class="text-center">Web Programiranje ASP (2017)</h6>
+	</div>
+</body>
+</html>
